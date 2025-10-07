@@ -1,14 +1,15 @@
-/* *{
-    background-color: beige;
-} */
+.deliveryHouses{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1rem; /* space between houses */
+  margin: 2rem 0;
+  text-align: center;
+}
 
-#house{
-    background-color: blue;
-    border-color: red;
-    width: 60px;
-    height: 40px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+.house{
+ background: lightblue;
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-weight: bold;
 }
