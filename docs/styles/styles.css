@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
 .deliveryHouses{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 1rem; /* space between houses */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; 
   margin: 2rem 0;
   text-align: center;
 }
@@ -12,4 +15,39 @@
   border: 2px solid #333;
   border-radius: 8px;
   font-weight: bold;
+  font-family: "Poiret One", cursive;
+  height: 250px;
+}
+
+
+.newspapers{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1rem; /* space between houses */
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.newspaper{
+ background: lightblue;
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  width: 145px;
+  position: relative;
+}
+
+.paper{
+  height: 100px;
+  width: 100px;
+}
+
+.number{
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 65px;
+  
 }
