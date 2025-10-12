@@ -1,7 +1,13 @@
-##Project Name: Project Bravo
-##Date: 10/12/2025
-##Objective: to deliever all the mail as quick as possible to the right houses
-##Rules: drag each newspaper to the correct house, if delievered to the wrong house must try again till all newspapers are delivered
+# Project Name: Project Bravo
+**Date:** 10/12/2025
+
+## Objective
+To deliver all the mail as quickly as possible to the right houses.
+
+## Rules
+- Drag each newspaper to the correct house.  
+- If delivered to the wrong house, you must try again until all newspapers are delivered.
+
 
 Credit: 
 
