@@ -8,7 +8,6 @@ To deliver all the mail as quickly as possible to the right houses.
 - Drag each newspaper to the correct house.  
 - If delivered to the wrong house, you must try again until all newspapers are delivered.
 
-
 Credit: 
 
 W3Schools- helped with functions as needed.

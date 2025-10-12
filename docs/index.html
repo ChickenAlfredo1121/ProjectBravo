@@ -39,6 +39,18 @@
 			</div>
 		</div>
 	</nav>
+
+	<!-- getting the users name and checking if its valid -->
+	<form id="playerForm" class="mb-3">
+		<label for="playerName" class="form-label">Player Name:</label>
+		<input type="text" id="playerName" name="playerName" class="form-control" required minlength="3" maxlength="20"
+			placeholder="Enter your name">
+		<div class="invalid-feedback">
+			Name must be 3–20 characters long.
+		</div>
+		<button type="submit" class="btn btn-primary mt-2">Save</button>
+	</form>
+
 	<!-- displaying best time -->
 	<div class="text-center mt-3">
 		<p id="best-time" class="fw-bold">Best Time: --</p>
@@ -67,16 +79,6 @@
 		</div>
 	</div>
 
-	<!-- getting the users name and checking if its valid -->
-	<form id="playerForm" class="mb-3">
-		<label for="playerName" class="form-label">Player Name:</label>
-		<input type="text" id="playerName" name="playerName" class="form-control" required minlength="3" maxlength="20"
-			placeholder="Enter your name">
-		<div class="invalid-feedback">
-			Name must be 3–20 characters long.
-		</div>
-		<button type="submit" class="btn btn-primary mt-2">Save</button>
-	</form>
 
 	<!-- all the houses  -->
 	<div class="deliveryHouses">
