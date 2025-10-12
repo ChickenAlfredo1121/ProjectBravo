@@ -1,37 +1,75 @@
+/* new font */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
+/* hard coded styles */
+:root {
+  --color-primary: lightblue;
+  --color-border: #333;
+  --spacing: 1rem;
+}
 
-.deliveryHouses{
+/* motion changes  */
+@media (max-width: 600px) {
+
+  .deliveryHouses,
+  .newspapers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .house:hover,
+  .newspaper:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+/* Style every odd house differently */
+.house:nth-child(odd) {
+  background: #cbe8f5;
+}
+
+/* Change color of selected newspaper */
+.newspaper.selected>.number {
+  color: red;
+}
+
+/* style for all things house and setup */
+.deliveryHouses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; 
+  gap: 1rem;
   margin: 2rem 0;
   text-align: center;
 }
 
-.house{
- background: lightblue;
-  padding: 1rem;
-  border: 2px solid #333;
+.house {
+  background: var(--color-primary);
+  padding: var(--spacing);
+  border: 2px solid var(--color-border);
   border-radius: 8px;
   font-weight: bold;
   font-family: "Poiret One", cursive;
   height: 250px;
 }
 
-
-.newspapers{
+/* style for all things newspaper */
+.newspapers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 1rem; /* space between houses */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  gap: 1rem;
+  /* space between houses */
   margin: 2rem 0;
   text-align: center;
 }
 
-.newspaper{
- background: lightblue;
-  padding: 1rem;
-  border: 2px solid #333;
+.newspaper {
+  background: var(--color-primary);
+  padding: var(--spacing);
+  border: 2px solid var(--color-border);
   border-radius: 8px;
   font-weight: bold;
   font-family: "Poiret One", cursive;
@@ -39,15 +77,23 @@
   position: relative;
 }
 
-.paper{
+.paper {
   height: 100px;
   width: 100px;
 }
 
-.number{
+.number {
   position: absolute;
   text-align: center;
-  top: 50px;
-  left: 65px;
-  
+  top: 30px;
+  left: 55px;
+  font-weight: bold;
+  font-size: 3rem;
+  color: blue;
+}
+
+/* fixing drag event */
+.newspaper>img,
+.newspaper>.number {
+  pointer-events: none;
 }

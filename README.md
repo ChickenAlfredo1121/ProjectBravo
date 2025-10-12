@@ -1,14 +1,15 @@
-## Hi there 👋
-As a beginner developer I want to learn how to make proper web game so that I can expand my knowledge and skills. This game being a practice example.
-
+##Project Name: Project Bravo
+##Date: 10/12/2025
+##Objective: to deliever all the mail as quick as possible to the right houses
+##Rules: drag each newspaper to the correct house, if delievered to the wrong house must try again till all newspapers are delivered
 
 Credit: 
 
 W3Schools- helped with functions as needed.
 
-CodeAcedemy- taught me how to do most of the things used in this site.
+CodeAcedemy- taught me the things I didn't know, good reference
 
-ChatGPT- helped debug code and made the javascript for the button
+ChatGPT- helped debug code and made some of the javascript
 
 Maria: collaborated with to help each other throughout the project
 
@@ -25,7 +26,8 @@ individual site pages
 #### docs/scripts/
 JavaScript file with all site behavior changes
 
-- **script.js** – has interactive elements (font change)
+- **game.js** – has all the games interactive parts
+- **storage.js** – has strorage elements of best score
 
 ## docs/styles/
 Styling sheet
@@ -35,40 +37,27 @@ Styling sheet
 ## docs/images/
 images used
 
-- **pictureofcybersecuritylogo.jpg**
+- **newspaper.jpg**
+- **WireframeOfProjectBravoGamePage.jpg**
 
 
 
-Wireframe link: ![Wireframe of the homepage](docs/images/wireframeindexpage.jpg)
+Wireframe link: ![Wireframe of the homepage](docs/images/WireframeOfProjectBravoGamePage.png)
 
-To view(live link): [https://chickenalfredo1121.github.io/ChickenAlfredo1121/]
+To view(live link): [https://chickenalfredo1121.github.io/ProjectBravo/]
 
 #Code Snippet
-this javascript toggles the font of the main page with a button and keeps it persistant
+this javascript randomizes the houses order
 
 ````javascript
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("font-toggle");
-  const body = document.body;
+function shuffleHousesInGrid() {
+  const container = document.querySelector('.deliveryHouses');
+  if (!container) return;
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem("font-theme");
-  if (savedTheme) body.className = savedTheme;
+  const houses = Array.from(container.querySelectorAll('.house'));
+  if (houses.length === 0) return;
 
-  button.addEventListener("click", () => {
-    body.classList.toggle("font-theme-one");
-    body.classList.toggle("font-theme-two");
-
-    localStorage.setItem("font-theme", body.className);
-    console.log("Font toggled:", body.className);
-  });
-});
+  const shuffled = houses.sort(() => Math.random() - 0.5);
+  shuffled.forEach(house => container.appendChild(house));
+}
 ````
-
-#Code Snippet
-This import gives the pages their fonts, sourced from google
-
-```css
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-```
